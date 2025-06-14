@@ -1,5 +1,5 @@
-from src.parser import CodeParser
-from src.generator import DocGenerator
+from src.parsers.parser import CodeParser
+from src.generators.generator import DocGenerator
 
 def test_extract_functions():
     parser = CodeParser()

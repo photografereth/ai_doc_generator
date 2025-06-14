@@ -1,8 +1,8 @@
 ##### **`src/cli.py`**
 
 import argparse
-from src.parser import CodeParser
-from src.generator import DocGenerator
+from src.parsers.parser import CodeParser
+from src.generators.generator import DocGenerator
 
 def main():
     parser = argparse.ArgumentParser(description="Gerador Automático de Documentação com IA")

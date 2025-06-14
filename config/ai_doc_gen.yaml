@@ -1,0 +1,10 @@
+# config/ai_doc_gen.yaml
+ai_provider: "openai"
+model: "gpt-4"
+output_format: "markdown"
+templates_dir: "./templates"
+exclude_patterns:
+  - "*.test.py"
+  - "__pycache__"
+custom_prompts:
+  function_doc: "Generate comprehensive documentation for this function..."

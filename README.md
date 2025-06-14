@@ -1,19 +1,34 @@
 # AI Doc Generator
 
-Ferramenta para gerar documentação automática de código usando IA.
+🤖 AI-powered documentation generator
 
-## Instalação
+## Quick Start
+
 ```bash
-pip install -r requirements.txt
-git clone https://github.com/tree-sitter/tree-sitter-python
-cd tree-sitter-python
-# Siga as instruções para compilar
-
-
-•  Ajuste o caminho em parser.py para apontar para tree-sitter-python.
-python src/cli.py caminho/para/arquivo.py --output README.md
-
-```jsx
-pytest tests/
+pip install -e .
+ai-doc-gen ./src --format markdown
 ```
 
+## Features
+
+- Multi-language support (Python, JS, etc.)
+- Multiple AI providers (OpenAI, Anthropic)
+- Flexible output formats
+- Smart code parsing
+
+## Configuration
+
+Create `.env`:
+```
+OPENAI_API_KEY=your_key
+```
+
+## Usage
+
+```python
+from ai_doc_generator import DocumentationGenerator, Config
+
+config = Config.load()
+generator = DocumentationGenerator(config)
+result = generator.generate(Path("./src"))
+```
